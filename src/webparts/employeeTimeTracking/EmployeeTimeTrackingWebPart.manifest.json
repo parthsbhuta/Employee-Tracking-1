@@ -17,11 +17,11 @@
   "preconfiguredEntries": [{
     "groupId": "5c03119e-3074-46fd-976b-c60198311f70", // Other
     "group": { "default": "Other" },
-    "title": { "default": "EmployeeTimeTracking" },
+    "title": { "default": "Employee Time Tracking" },
     "description": { "default": "This webpart will display employee work time and employee can add their work time." },
     "officeFabricIconFontName": "Page",
     "properties": {
-      "description": "EmployeeTimeTracking"
+      "description": "Employee Time Tracking"
     }
   }]
 }

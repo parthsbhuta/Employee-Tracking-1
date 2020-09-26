@@ -5,7 +5,21 @@
     "id": "9061cf1c-066a-4fec-9c41-8e310cd9a724",
     "version": "1.0.0.0",
     "includeClientSideAssets": true,
-    "isDomainIsolated": false
+    "isDomainIsolated": false,
+    "features": [{
+      "title": "Employee Time Tracking Feature",
+      "description": "This feature create a list for the Employee Time tracking.",
+      "id": "c2db8c2b-389c-4f46-a7f2-9aa0aa1037b2",
+      "version": "1.0.0.0",
+      "assets": {
+        "elementManifests": [
+          "elements.xml"
+        ],
+        "elementFiles":[
+          "schema.xml"
+        ]
+      }
+    }]
   },
   "paths": {
     "zippedPackage": "solution/employee-tracking.sppkg"

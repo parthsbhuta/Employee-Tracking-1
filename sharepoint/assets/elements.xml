@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+
+    <Field ID="{CC175B6A-6C10-4150-945F-BF54EDD52115}"
+            Name="Time"
+            DisplayName="Time"
+            StaticName="Time"
+            Type="Number"
+            Min="0"
+            Required="FALSE"
+            Group="Employee Tracking Columns" />
+
+    <Field ID="{F0529414-C3B3-4DF6-9052-831E7A853872}"
+            Name="TimeSheetDescription"
+            DisplayName="TimeSheet Description"
+            StaticName="TimeSheetDescription"
+            Type="Note"
+            NumLines="5"
+            RichText="TRUE"
+            RichTextMode="FullHtml"
+            Description="Timesheet Description."
+            Group="Employee Tracking Columns" />
+
+    <Field ID="{B76ACD5F-7598-427D-B409-F293B9A601F9}"
+            Name="Catagory"
+            DisplayName="Catagory"
+            StaticName="Catagory"
+            Type="Choice"
+            Required="FALSE"
+            Group="Employee Tracking Columns">
+        <CHOICES>
+        <CHOICE>Billable</CHOICE>
+        <CHOICE>Non-Billable</CHOICE>
+        <CHOICE>Upskilling</CHOICE>
+        <CHOICE>Meeting</CHOICE>
+        </CHOICES>
+    </Field>
+
+    <ContentType ID="0x010042D0C1C200A14B6887742B6344675C8B"
+            Name="Employee Tracking"
+            Group="Employee Tracking Content Types"
+            Description="Employee Tracking content types from web part solution">
+        <FieldRefs>
+            <FieldRef ID="{CC175B6A-6C10-4150-945F-BF54EDD52115}" />
+            <FieldRef ID="{F0529414-C3B3-4DF6-9052-831E7A853872}" />
+            <FieldRef ID="{B76ACD5F-7598-427D-B409-F293B9A601F9}" />
+        </FieldRefs>
+    </ContentType>
+
+    <ListInstance
+            CustomSchema="schema.xml"
+            FeatureId="00bfea71-de22-43b2-a848-c05709900100"
+            Title="Employee Time Tracking"
+            Description="Employee Time Tracking"
+            TemplateType="100"
+            Url="Lists/EmployeeTime">
+    </ListInstance>
+
+</Elements>

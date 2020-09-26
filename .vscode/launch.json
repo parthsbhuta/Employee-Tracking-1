@@ -8,7 +8,7 @@
       "name": "Local workbench",
       "type": "chrome",
       "request": "launch",
-      "url": "https://kraftreality.sharepoint.com/sites/Navneet-TeamSite/_layouts/workbench.aspx",
+      "url": "https://kraftreality.sharepoint.com/sites/Navneet-Communication/_layouts/workbench.aspx",
       "webRoot": "${workspaceRoot}",
       "sourceMaps": true,
       "sourceMapPathOverrides": {
@@ -25,7 +25,7 @@
       "name": "Hosted workbench",
       "type": "chrome",
       "request": "launch",
-      "url": "https://kraftreality.sharepoint.com/sites/Navneet-TeamSite/_layouts/workbench.aspx",
+      "url": "https://kraftreality.sharepoint.com/sites/Navneet-Communication/_layouts/workbench.aspx",
       "webRoot": "${workspaceRoot}",
       "sourceMaps": true,
       "sourceMapPathOverrides": {
