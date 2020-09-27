@@ -8,26 +8,74 @@
   }
 
   .btnsave{
-    margin-top: 10px;
+    display: block;
+    width: 70%;
+    margin: 0 15%;
+    margin-top: 20px!important;
+    text-align: center;
   }
 
   .txtarea{
     resize: vertical;
   }
 
-  .tableHeader{
-    font-weight: bolder;
+  .tableHeader span{
+    font-weight: bold;
+    font-size: 16px;
+  }
+
+  .formLabel{
+    font-weight: bold;
+    font-size: 16px;
+    margin-top: 15px;
+  }
+
+  .formContainer{
+    width: 70%;
+    margin: 0 15%;
   }
 
   .spinner{
     width: 100%;
     text-align: center;
+    padding: 40px;
   }
 
   .containerHeader{
     text-align: center;
-    font-size: 22px;
+    font-size: 28px;
     font-weight: bolder;
+    color: #1b5b71;
+    padding-bottom: 20px;
+    line-height: 1.055;
+    font-weight: 700;
+    margin: 0 0 10px;
+    position: relative;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
+    margin: 0;
+    padding-top: 20px;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  }
+
+  .containerHeader::before{
+    content: '';
+    position: absolute;
+    width: 95px;
+    height: 4px;
+    background-color: #fff;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0 auto;
+    background-color: #28b6e7;
+    box-sizing: border-box;
+  }
+
+  .tableContainer>div{
+    width: 100%;
   }
 
   .row {

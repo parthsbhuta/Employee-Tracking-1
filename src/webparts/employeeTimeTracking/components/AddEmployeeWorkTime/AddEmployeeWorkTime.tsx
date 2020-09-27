@@ -97,29 +97,30 @@ export default class AddEmployeeWorkTime extends React.Component<IAddEmployeeWor
     return (
       <div>
         <div className={styles.containerHeader}>Add New Logs</div>
-        {this.state.isSuccess === true && <MessageBar messageBarType={MessageBarType.success} isMultiline={false} >
+        {this.state.isSuccess === true && <MessageBar className={styles.formContainer} messageBarType={MessageBarType.success} isMultiline={false} >
           Successfully added item to sharepoint list.
       </MessageBar>}
-        {this.state.isError === true && <MessageBar messageBarType={MessageBarType.error} isMultiline={false} >
+        {this.state.isError === true && <MessageBar className={styles.formContainer} messageBarType={MessageBarType.error} isMultiline={false} >
           Getting Error while add logs in sharepoint list. Please try it again.
       </MessageBar>}
-        {this.state.isHoursExistsWarning === true && <MessageBar messageBarType={MessageBarType.warning} isMultiline={false} >
+        {this.state.isHoursExistsWarning === true && <MessageBar className={styles.formContainer} messageBarType={MessageBarType.warning} isMultiline={false} >
           Overtime and requires manager approval.
       </MessageBar>}
-        <Stack horizontal verticalAlign="center" horizontalAlign="space-between">
+        <Stack className={styles.formContainer} horizontal verticalAlign="center" horizontalAlign="space-between">
           {this.state.isLoading ? (<Spinner label="Adding Logs Please wait..." className={styles.spinner} ariaLive="assertive" labelPosition="bottom" />) : (
             <Stack.Item grow>
-              <Label>Title</Label>
+              <Label className={styles.formLabel}>Title</Label>
               <TextField placeholder="Title" value={this.state.title} onChange={this.titleChange} />
-              <Label>Description</Label>
+              <Label className={styles.formLabel}>Description</Label>
               <TextField multiline={true} onChange={this.descChange} value={this.state.description} style={{ "resize": "vertical" }} className={styles.txtarea} placeholder="Description" />
+              <Label className={styles.formLabel}>Category</Label>
               <Dropdown
-                label={'Category'} placeholder="Select a Category"
+                placeholder="Select a Category"
                 onChange={this.catagoryChange}
                 defaultSelectedKey={this.state.category}
                 options={CatagoryOptions}
               />
-              <Label>Time1023</Label>
+              <Label className={styles.formLabel}>Time</Label>
               <TextField placeholder="Time" type="number" value={String(this.state.time)} onChange={this.timeChange} />
             </Stack.Item>
           )}
