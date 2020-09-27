@@ -1,8 +1,9 @@
 export default interface IDataFields {
-    title: string;
-    description: string;
-    catagory: string;
-    time: string;
-    createdAt: string;
-    createdBy: string;
-  }
+  // id: number;
+  title: string;
+  description: string;
+  catagory: string;
+  time: string;
+  createdAt: string;
+  createdBy: string;
+}

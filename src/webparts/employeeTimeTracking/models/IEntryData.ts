@@ -5,5 +5,7 @@ export default interface IEntryData {
     time: number;
     isLoading: boolean;
     isSuccess: boolean;
+    isError: boolean;
+    isHoursExistsWarning: boolean;
   }
   

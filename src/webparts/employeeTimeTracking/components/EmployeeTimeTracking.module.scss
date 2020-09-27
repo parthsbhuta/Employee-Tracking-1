@@ -19,6 +19,17 @@
     font-weight: bolder;
   }
 
+  .spinner{
+    width: 100%;
+    text-align: center;
+  }
+
+  .containerHeader{
+    text-align: center;
+    font-size: 22px;
+    font-weight: bolder;
+  }
+
   .row {
     @include ms-Grid-row;
     @include ms-fontColor-white;

@@ -12,7 +12,6 @@ import EmployeeTimeTracking from './components/EmployeeTimeTracking';
 import { IEmployeeTimeTrackingProps } from './components/IEmployeeTimeTrackingProps';
 
 export interface IEmployeeTimeTrackingWebPartProps {
-  description: string;
 }
 
 export default class EmployeeTimeTrackingWebPart extends BaseClientSideWebPart<IEmployeeTimeTrackingWebPartProps> {
@@ -21,7 +20,7 @@ export default class EmployeeTimeTrackingWebPart extends BaseClientSideWebPart<I
     const element: React.ReactElement<IEmployeeTimeTrackingProps > = React.createElement(
       EmployeeTimeTracking,
       {
-        description: this.properties.description
+        context: this.context
       }
     );
 
@@ -32,29 +31,13 @@ export default class EmployeeTimeTrackingWebPart extends BaseClientSideWebPart<I
     ReactDom.unmountComponentAtNode(this.domElement);
   }
 
-  protected get dataVersion(): Version {
-    return Version.parse('1.0');
-  }
+  // protected get dataVersion(): Version {
+  //   return Version.parse('1.0');
+  // }
 
   protected getPropertyPaneConfiguration(): IPropertyPaneConfiguration {
     return {
-      pages: [
-        {
-          header: {
-            description: strings.PropertyPaneDescription
-          },
-          groups: [
-            {
-              groupName: strings.BasicGroupName,
-              groupFields: [
-                PropertyPaneTextField('description', {
-                  label: strings.DescriptionFieldLabel
-                })
-              ]
-            }
-          ]
-        }
-      ]
+      pages: []
     };
   }
 }
