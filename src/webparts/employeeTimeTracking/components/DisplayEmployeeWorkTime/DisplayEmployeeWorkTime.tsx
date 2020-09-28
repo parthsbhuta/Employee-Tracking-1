@@ -47,7 +47,7 @@ export default class DisplayEmployeeWorkTime extends React.Component<IDisplayEmp
 
   public render(): React.ReactElement<IDisplayEmployeeWorkTimeProps> {
     return (
-      <div>
+      <div className={styles.section}>
         <div className={styles.containerHeader}>Today's Logs</div>
         <Stack className={styles.tableContainer} horizontal verticalAlign="center" horizontalAlign="space-between">
           <DetailsList

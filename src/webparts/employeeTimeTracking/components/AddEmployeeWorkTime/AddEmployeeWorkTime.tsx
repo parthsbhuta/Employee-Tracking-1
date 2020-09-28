@@ -7,6 +7,9 @@ import ISPInsertData from '../../models/ISPInsertData';
 import { Stack, Label, TextField, PrimaryButton, Spinner, MessageBar, MessageBarType, Dropdown } from 'office-ui-fabric-react';
 
 export default class AddEmployeeWorkTime extends React.Component<IAddEmployeeWorkTimeProps, IEntryData> {
+
+  private data: ISPInsertData;
+
   constructor(props) {
     super(props);
     this.state = {
@@ -65,14 +68,14 @@ export default class AddEmployeeWorkTime extends React.Component<IAddEmployeeWor
       isLoading: true
     });
 
-    const data: ISPInsertData = {
+    this.data = {
       Title: this.state.title,
       TimeSheetDescription: this.state.description,
       Catagory: this.state.category,
       Time: this.state.time
     };
 
-    this.props.employeeLogStore.saveEmployeeLog(data).then((data: any) => {
+    this.props.employeeLogStore.saveEmployeeLog(this.data).then((data: any) => {
       this.setState({
         isSuccess: true,
         isError: false,
@@ -95,7 +98,7 @@ export default class AddEmployeeWorkTime extends React.Component<IAddEmployeeWor
 
   public render(): React.ReactElement<IAddEmployeeWorkTimeProps> {
     return (
-      <div>
+      <div className={styles.section}>
         <div className={styles.containerHeader}>Add New Logs</div>
         {this.state.isSuccess === true && <MessageBar className={styles.formContainer} messageBarType={MessageBarType.success} isMultiline={false} >
           Successfully added item to sharepoint list.

@@ -27,7 +27,7 @@
   .formLabel{
     font-weight: bold;
     font-size: 16px;
-    margin-top: 15px;
+    // margin-top: 15px;
   }
 
   .formContainer{
@@ -39,6 +39,11 @@
     width: 100%;
     text-align: center;
     padding: 40px;
+  }
+
+  .section{
+    width: 50%;
+    float: left;
   }
 
   .containerHeader{

@@ -26,6 +26,8 @@ This webpart track the Employee Work time and display employee own timesheet on 
     -   gulp build
     -   gulp serve
 -   Open the SharePoint Online site workbatch (i.e., <SharePoint Site URL>/_layouts/workbench.aspx)
+-   App below Employee Time Tracking webpart
+    -   WebPart Name: Employee Time Tracking
 
 This package produces the following:
 
@@ -52,7 +54,7 @@ This package produces the following:
 
 Solution|Author(s)
 --------|---------
-employee-tracking | Navneet Bhimani (SOHO Dragon)
+employee-tracking | Navneet Bhimani
 
 ### Version history
 
