@@ -19,17 +19,17 @@ export default class EmployeeLogStore {
     }
 
     public async init() {
-        this.employeeLogs = await this.employeeDataProvider.getEmployeeLogs();
+        this.employeeLogs = await this.employeeDataProvider.getEmployeeLogs(this.context);
         this.employeeLogs.map(d => {
             this.totalHours += parseInt(d.time);
         });
     }
 
     public async getEmployeeLogs(): Promise<IDataFields[]> {
-        return await this.employeeDataProvider.getEmployeeLogs();
+        return await this.employeeDataProvider.getEmployeeLogs(this.context);
     }
 
     public async saveEmployeeLog(data: ISPInsertData): Promise<IDataFields> {
-        return await this.employeeDataProvider.saveEmployeeLog(data);
+        return await this.employeeDataProvider.saveEmployeeLog(data, this.context);
     }
 }

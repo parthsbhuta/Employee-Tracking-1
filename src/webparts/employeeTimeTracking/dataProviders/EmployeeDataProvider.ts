@@ -7,7 +7,12 @@ import { EmployeeListTitle } from '../common/Constants';
 import { WebPartContext } from '@microsoft/sp-webpart-base';
 
 export default class EmployeeDataProvider implements IEmployeeDataProvider {
-    public async getEmployeeLogs(): Promise<IDataFields[]> {
+    public async getEmployeeLogs(context: WebPartContext): Promise<IDataFields[]> {
+
+        pnp.setup({
+            spfxContext: context
+        });
+
         return new Promise<IDataFields[]>(async (resolve, reject) => {
             try {
                 const { Id: principalId } = await pnp.sp.web.currentUser.select('Id').get();
@@ -67,7 +72,10 @@ export default class EmployeeDataProvider implements IEmployeeDataProvider {
         });
     }
 
-    public saveEmployeeLog(data: ISPInsertdata): Promise<IDataFields> {
+    public saveEmployeeLog(data: ISPInsertdata, context: WebPartContext): Promise<IDataFields> {
+        pnp.setup({
+            spfxContext: context
+        });
         return new Promise<IDataFields>(async (resolve, reject) => {
             try {
                 await pnp.sp.web.lists
